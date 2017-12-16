@@ -11,3 +11,4 @@ these libraries can be somewhat painful to compile from scratch on windows, so t
 * libressl: https://github.com/libressl/libressl/blob/master/src/LICENSE
 * libogg/libvoribs/libvorbisfile: https://github.com/xiph/vorbis/blob/master/README.md
 * zlib: https://www.zlib.net/zlib_license.html
+* lame: http://lame.sourceforge.net/license.txt
