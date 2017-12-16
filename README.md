@@ -10,3 +10,4 @@ these libraries can be somewhat painful to compile from scratch on windows, so t
 * curl: https://curl.haxx.se/docs/copyright.html
 * libressl: https://github.com/libressl/libressl/blob/master/src/LICENSE
 * libogg/libvoribs/libvorbisfile: https://github.com/xiph/vorbis/blob/master/README.md
+* zlib: https://www.zlib.net/zlib_license.html
