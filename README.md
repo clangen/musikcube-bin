@@ -12,3 +12,4 @@ these libraries can be somewhat painful to compile from scratch on windows, so t
 * libogg/libvoribs/libvorbisfile: https://github.com/xiph/vorbis/blob/master/README.md
 * zlib: https://www.zlib.net/zlib_license.html
 * lame: http://lame.sourceforge.net/license.txt
+* SourceCodePro: https://github.com/adobe-fonts/source-code-pro/blob/master/LICENSE.md 
