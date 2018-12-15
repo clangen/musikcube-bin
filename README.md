@@ -13,3 +13,5 @@ these libraries can be somewhat painful to compile from scratch on windows, so t
 * zlib: https://www.zlib.net/zlib_license.html
 * lame: http://lame.sourceforge.net/license.txt
 * SourceCodePro: https://github.com/adobe-fonts/source-code-pro/blob/master/LICENSE.md 
+* flac: https://xiph.org/flac/license.html
+* ExoPlayer: https://github.com/google/ExoPlayer/blob/release-v2/LICENSE
