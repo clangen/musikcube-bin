@@ -1,3 +1,4 @@
+* download the full release, don't clone the git repo -- it'll be missing some necessary stuff.
 * open Visual Studio Command Prompt
 * mkdir build-vs2017
 * cd build-vs2017
