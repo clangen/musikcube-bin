@@ -15,3 +15,25 @@ these libraries can be somewhat painful to compile from scratch on windows, so t
 * SourceCodePro: https://github.com/adobe-fonts/source-code-pro/blob/master/LICENSE.md 
 * flac: https://xiph.org/flac/license.html
 * ExoPlayer: https://github.com/google/ExoPlayer/blob/release-v2/LICENSE
+
+# build instructions
+
+## CRT
+
+when generating dlls/libs use the following CRTs:
+
+* release:  `Multi-threaded (/MT)`
+* debug: `Multi-threaded Debug (/MTd)`
+
+## libressl
+
+* `open Visual Studio Command Prompt`
+* `mkdir build-vs2017`
+* `cd build-vs2017`
+* `cmake -DLIBRESSL_APPS=OFF -DLIBRESSL_TESTS=OFF -DENABLE_EXTRATESTS=OFF -DBUILD_SHARED_LIBS=ON -G"Visual Studio 15 2017" ..`
+
+> generate 64-bit projects by opening the solution and going to Build > Configuration Manager > Active solution platform > New... > x64
+
+> for 64-bit support, you may need to go into the project's settings > Linker > Command Line and remove `/machine:X86`
+
+> you may need to define `_CRT_SUPPRESS_RESTRICT` if crypto warns about weird undefined references deep in the CRT.
