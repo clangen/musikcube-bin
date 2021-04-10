@@ -9,7 +9,8 @@
 #
 # Then, edit `/mingw32/lib/pkgconfig/opus.pc / vorbis.pc / vorbisenc.pc / ogg.pc` and
 # update the `Libs` line from `-lopus` to `-l:libopus.a`, and do the same for vorbis
-# and ogg. This will ensure they get linked statically.
+# and ogg. Also, make sure to update references to `-lspp` the same way. This will ensure
+# everything gets linked statically.
 #
 
 MINGW_TYPE="mingw32"
