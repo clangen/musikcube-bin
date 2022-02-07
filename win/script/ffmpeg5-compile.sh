@@ -4,8 +4,11 @@
 #
 # Note: to compile you first need to install the following packages:
 #
-#   * 32-bit: pacman -S base-devel mingw32/mingw-w64-i686-opus mingw32/mingw-w64-i686-libvorbis
-#   * 64-bit: pacman -S base-devel mingw64/mingw-w64-x86_64-opus mingw64/mingw-w64-x86_64-libvorbis
+#   * 32-bit: pacman -S base-devel mingw32/mingw-w64-i686-gcc mingw32/mingw-w64-i686-opus mingw32/mingw-w64-i686-libvorbis
+#   * 64-bit: pacman -S base-devel mingw64/mingw-w64-x86_64-gcc mingw64/mingw-w64-x86_64-opus mingw64/mingw-w64-x86_64-libvorbis
+#
+# Note: make sure to install the mingw64/mingw-w64 version of gcc, and not regular "gcc"
+# or you will have issues statically linking.
 #
 # Then, edit `/mingw32/lib/pkgconfig/opus.pc / vorbis.pc / vorbisenc.pc / ogg.pc` and
 # update the `Libs` line from `-lopus` to `-l:libopus.a`, and do the same for vorbis
@@ -16,13 +19,11 @@
 MINGW_TYPE="mingw32"
 OUT_PATH="/c/src/ffmpeg-${MINGW_TYPE}-inst"
 
-export PKG_CONFIG_PATH="/${MINGW_TYPE}/lib/pkgconfig"
 export CFLAGS=-static-libgcc
 export CXXFLAGS=-static-libgcc
 export LDFLAGS=-static-libgcc
 
 ./configure --disable-static \
-    --env="PKG_CONFIG_PATH=/${MINGW_TYPE}/lib/pkgconfig" \
     --pkg-config-flags="--static" \
     --prefix="${OUT_PATH}" \
     --enable-shared \
