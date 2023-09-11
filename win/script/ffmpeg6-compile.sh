@@ -1,11 +1,12 @@
 
 #!/bin/sh
 
+# Install the 64-bit version of msys2 -- it comes with both 64- and 32- bit environments.
 #
 # Note: to compile you first need to install the following packages:
 #
-#   * 32-bit: pacman -S base-devel mingw32/mingw-w64-i686-opus mingw32/mingw-w64-i686-libvorbis
-#   * 64-bit: pacman -S base-devel mingw64/mingw-w64-x86_64-opus mingw64/mingw-w64-x86_64-libvorbis
+#   * 32-bit: pacman -S base-devel mingw32/mingw-w64-i686-gcc mingw32/mingw-w64-i686-nasm mingw32/mingw-w64-i686-opus mingw32/mingw-w64-i686-libvorbis
+#   * 64-bit: pacman -S base-devel mingw64/mingw-w64-x86_64-gcc mingw64/mingw-w64-x86_64-nasm mingw64/mingw-w64-x86_64-opus mingw64/mingw-w64-x86_64-libvorbis
 #
 # Then, edit `/mingw32/lib/pkgconfig/opus.pc / vorbis.pc / vorbisenc.pc / ogg.pc` and
 # update the `Libs` line from `-lopus` to `-l:libopus.a`, and do the same for vorbis
@@ -24,6 +25,7 @@ export LDFLAGS=-static-libgcc
     --pkg-config-flags="--static" \
     --prefix="${OUT_PATH}" \
     --enable-shared \
+    --disable-asm \
     --disable-everything \
     --disable-programs \
     --disable-doc \
