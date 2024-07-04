@@ -15,7 +15,7 @@
 #
 
 MINGW_TYPE="mingw64"
-OUT_PATH="/c/src/ffmpeg-${MINGW_TYPE}-inst"
+OUT_PATH="/c/src/ffmpeg7-${MINGW_TYPE}-inst"
 
 export CFLAGS=-static-libgcc
 export CXXFLAGS=-static-libgcc
