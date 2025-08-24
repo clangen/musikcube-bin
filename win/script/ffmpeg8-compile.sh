@@ -14,8 +14,8 @@
 # everything gets linked statically.
 #
 
-MINGW_TYPE="mingw64"
-OUT_PATH="/c/src/ffmpeg7-${MINGW_TYPE}-inst"
+ARCH_BITS="64"
+OUT_PATH="/c/src/ffmpeg8-mingw${ARCH_BITS}-inst"
 
 export CFLAGS=-static-libgcc
 export CXXFLAGS=-static-libgcc
