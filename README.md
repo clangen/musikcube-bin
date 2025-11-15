@@ -15,6 +15,7 @@ these libraries can be somewhat painful to compile from scratch on windows, so t
 * SourceCodePro: https://github.com/adobe-fonts/source-code-pro/blob/master/LICENSE.md 
 * flac: https://xiph.org/flac/license.html
 * ExoPlayer: https://github.com/google/ExoPlayer/blob/release-v2/LICENSE
+* Discord Game SDK: https://support-dev.discord.com/hc/en-us/articles/8562894815383-Discord-Developer-Terms-of-Service
 
 # build instructions
 
